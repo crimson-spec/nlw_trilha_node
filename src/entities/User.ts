@@ -1,9 +1,9 @@
 import { Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, Generated } from "typeorm";
 
 @Entity("users")
-export class User {
+export default class User {
 
-    @PrimaryGeneratedColumn('uuid')
+    @PrimaryGeneratedColumn()
     id: number;
 
     @Column()
@@ -20,10 +20,5 @@ export class User {
 
     @CreateDateColumn()
     updated_at: Date;
-    /* 
-        constructor(){
-            if(!this.id)
-                this.id = this.increment;
-        } */
 
 }
